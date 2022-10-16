@@ -7,10 +7,10 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "gulp build",
 		"lint": "gulp lint",
-		"prepublish": "npm run build",
-		"test": "gulp test"
+		"test": "gulp test",
+		"build": "gulp build",
+		"prepublish": "npm run build"
 	},
 	"dependencies": {
 		"axios": "^1.1.2",

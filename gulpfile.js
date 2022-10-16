@@ -22,4 +22,4 @@ gulp.task("ts", function () {
 	return tsProject.src().pipe(tsProject()).pipe(gulp.dest("dist"));
 });
 
-gulp.task("build", gulp.series("test", "clean", "ts"));
+gulp.task("build", gulp.series("clean", "ts"));
