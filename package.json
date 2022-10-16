@@ -1,0 +1,36 @@
+{
+	"name": "nyaa-ka",
+	"version": "0.0.1",
+	"description": "A library for querying torrents on nyaa.si via web scraping.",
+	"license": "ISC",
+	"author": "Aelexe",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "gulp build",
+		"lint": "gulp lint",
+		"prepublish": "npm run build",
+		"test": "gulp test"
+	},
+	"dependencies": {
+		"axios": "^1.1.2",
+		"node-html-parser": "^6.1.1"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.3.3",
+		"@types/gulp": "^4.0.9",
+		"@types/gulp-mocha": "^0.0.33",
+		"@types/mocha": "^10.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.40.0",
+		"chai": "^4.3.6",
+		"eslint": "^8.25.0",
+		"fs-extra": "^10.1.0",
+		"gulp": "^4.0.2",
+		"gulp-eslint": "^6.0.0",
+		"gulp-mocha": "^8.0.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"mocha": "^10.0.0",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.4"
+	}
+}
