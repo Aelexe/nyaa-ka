@@ -58,8 +58,9 @@ export enum SortOrder {
 }
 
 interface Torrent {
-	category: Category;
+	infoHash: string;
 	title: string;
+	category: Category;
 	link: string;
 	downloadLink: string;
 	magnetLink: string;
@@ -125,6 +126,7 @@ class NyaaKa {
 			const link = titleLink.getAttribute("href");
 			const downloadLink = row.querySelector("td:nth-child(3) a:nth-child(1)").getAttribute("href");
 			const magnetLink = row.querySelector("td:nth-child(3) a:nth-child(2)").getAttribute("href");
+			const infoHash = magnetLink.match(/btih:(.+?)&/)[1];
 			const sizeString = row.querySelector("td:nth-child(4)").text;
 			const date = new Date(Number.parseInt(row.querySelector("td:nth-child(5)").getAttribute("data-timestamp")));
 			const seeders = Number.parseInt(row.querySelector("td:nth-child(6)").text);
@@ -151,8 +153,9 @@ class NyaaKa {
 			}
 
 			searchResponse.torrents.push({
-				category: category as Category,
+				infoHash,
 				title,
+				category: category as Category,
 				link,
 				downloadLink,
 				magnetLink,

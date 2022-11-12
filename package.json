@@ -1,6 +1,6 @@
 {
 	"name": "nyaa-ka",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"description": "A library for querying torrents on nyaa.si via web scraping.",
 	"license": "ISC",
 	"author": "Aelexe",
